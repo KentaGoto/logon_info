@@ -10,3 +10,4 @@
 ## Requires
 
 - Windows
+- Perl5.16 or above
