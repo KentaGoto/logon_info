@@ -1,11 +1,11 @@
 # logon_info
 
 ## Description
-ログインされたIPアドレスを出力
+Output logged-in IP address
 
 **NOTE:**
 
-- 管理者コマンドプロンプトから実行
+- Run from admin command prompt
 
 ## Requires
 
