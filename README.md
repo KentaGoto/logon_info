@@ -1,7 +1,7 @@
 # logon_info
 
 ## Description
-Output logged-in IP address
+Output logged-in IP address.
 
 **NOTE:**
 
@@ -10,4 +10,4 @@ Output logged-in IP address
 ## Requires
 
 - Windows
-- Perl5.26 or above
+- Perl5
