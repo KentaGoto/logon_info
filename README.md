@@ -11,3 +11,6 @@ Output logged-in IP address.
 
 - Windows
 - Perl5
+
+## License
+MIT
