@@ -14,3 +14,6 @@ Output logged-in IP address.
 
 ## License
 MIT
+
+## Author  
+Kenta Goto
