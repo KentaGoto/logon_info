@@ -25,9 +25,9 @@ if ( $end !~ /\d\d\d\d\-\d\d\-\d\d/ ){
 
 print "\n";
 
-# ID 4624 は、ローカルコンピューター上で発生したログオン成功イベント。
-# ID 4625 は、ローカルコンピューター上で発生したログオン失敗イベント。
-# 時間は GMT (グリニッジ標準時) で記録されている。日本標準時 (JST) の場合 9 時間を差し引くため、前日の 15 時がその日の 0 時に相当する。
+# ID 4624 is a successful logon event that occurred on the local computer.
+# ID 4625 is a logon failure event that occurred on the local computer.
+# The time is recorded in GMT (Greenwich Mean Time). In the case of Japan Standard Time (JST), 9 hours are subtracted, so 15:00 on the previous day corresponds to 0:00 on that day.
 my $cmd = 'wevtutil qe Security /f:Text /q:"*[System[(EventID=4624 or EventID=4625) and TimeCreated[@SystemTime>=\'' . $start . 'T15:00:00.000Z\' and @SystemTime<=\'' . $end . 'T14:59:59.999Z\']]]';
 
 my @results = `$cmd`;
@@ -40,7 +40,7 @@ foreach my $j ( @results ){
 		$date = encode('cp932', $decode_str);
 	}
 
-	# ログオン履歴のIPにマッチしたら出力
+	# Output if the IP in the logon history matches.
 	if ( $decode_str =~ /ソース ネットワーク アドレス.+(192\.(?:[0-9]{1,3})\.(?:[0-9]{1,3})\.(?:[0-9]{1,3}))/ ){
 		print $date;
 		my $ip = encode('cp932', $decode_str);
