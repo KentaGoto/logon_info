@@ -9,7 +9,7 @@ Output logged-in IP address.
 
 ## Requires
 
-- Windows
+- Windows10 (Locale: JA-JP) 
 - Perl5
 
 ## License
