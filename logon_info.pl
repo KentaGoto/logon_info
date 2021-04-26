@@ -4,7 +4,7 @@ use utf8;
 use Encode qw( encode decode );
 
 #######################################################
-# This tool is run at the administrator command prompt
+# This tool is run at the Administrator command prompt.
 #######################################################
 
 print 'Start (yyyy-mm-dd): ';
